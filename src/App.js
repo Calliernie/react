@@ -12,6 +12,7 @@ import Inline from "./components/Inline";
 import "./appStyles.css";
 import styles from "./appStyles.module.css";
 import LifecycleA from "./components/LifecycleA";
+import FragmentDemo from "./components/FragmentDemo";
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
       {/* <Stylesheet primary={true}></Stylesheet> */}
       {/* <Hello /> */}
       {/* <Inline></Inline> */}
-      <LifecycleA></LifecycleA>
+      <FragmentDemo></FragmentDemo>
     </div>
   );
 }
