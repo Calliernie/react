@@ -13,6 +13,9 @@ import "./appStyles.css";
 import styles from "./appStyles.module.css";
 import LifecycleA from "./components/LifecycleA";
 import FragmentDemo from "./components/FragmentDemo";
+import Table from "./components/Table";
+import PureComp from "./components/PureComp";
+import RefsDemo from "./components/RefsDemo";
 
 function App() {
   return (
@@ -31,7 +34,10 @@ function App() {
       {/* <Stylesheet primary={true}></Stylesheet> */}
       {/* <Hello /> */}
       {/* <Inline></Inline> */}
-      <FragmentDemo></FragmentDemo>
+      {/* <FragmentDemo></FragmentDemo> */}
+      {/* <Table></Table> */}
+      {/* <PureComp /> */}
+      <RefsDemo />
     </div>
   );
 }

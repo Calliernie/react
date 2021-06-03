@@ -1,24 +1,31 @@
-import React, { Component } from "react";
-import ChildComponent from "./ChildComponent";
+import React, { Component, PureComponent } from "react";
+import RegComp from "./RegComp";
+import PureComp from "./PureComp";
+import MemoComp from "./MemoComp";
 
 class ParentComponent extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      parentName: "Parent",
+      name: "Ernest",
     };
-    this.greetParent = this.greetParent.bind(this);
   }
 
-  greetParent(childName) {
-    alert(`Hello ${this.state.parentName} from ${childName}`);
+  componentDidMount() {
+    setInterval(() => {
+      this.setState({ name: "Ernest" });
+    }, 2000);
   }
 
   render() {
+    console.log("Parent Component Render");
     return (
       <div>
-        <ChildComponent greetHandler={this.greetParent}></ChildComponent>
+        Parent Component
+        {/* <RegComp name={this.state.name}></RegComp>
+        <PureComp name={this.state.name}></PureComp> */}
+        <MemoComp name={this.state.name} />
       </div>
     );
   }
